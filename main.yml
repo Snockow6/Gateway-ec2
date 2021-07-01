@@ -1,0 +1,18 @@
+#################################################
+# DO Community Playbooks: Docker
+# Edited by snockow6
+# This Playbook is for Home Server machine
+# V2.3
+#################################################
+---
+- name: Setup Home Server
+  hosts: Machines
+  become: true
+  tasks:
+
+    - name: update all current packages
+      become: yes
+      package:
+        name: "*"
+        state: latest
+
